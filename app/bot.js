@@ -155,7 +155,8 @@ bot.on("message", (msg) => {
 
   if (text === "/help") return bot.sendMessage(chatId, helpText());
   if (text === "/lanes") return bot.sendMessage(chatId, Object.keys(LANES).join("\n"));
-
+  if (text === "/ping") return bot.sendMessage(chatId, "pong ✅")
+;
   // /list LANE drafts|approved
   if (text.startsWith("/list ")) {
     const parts = text.split(" ").filter(Boolean);
