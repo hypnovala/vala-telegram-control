@@ -14,7 +14,9 @@ jobs:
         with:
           host: 72.60.231.42
           username: root
+          port: 22
           key: ${{ secrets.VPS_SSH_KEY }}
+          script_stop: true 
           script: |
             cd /docker/vala-telegram-bot
             docker compose pull
